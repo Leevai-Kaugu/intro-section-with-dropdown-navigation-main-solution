@@ -16,6 +16,7 @@ nav{
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  align-items: center;
 }
 h1{
   font-size: 6vw;
@@ -24,7 +25,9 @@ h1{
   margin: 0px;
 }
 h2{
-  font-size: 2vw;
+  font-size: 1.2vw;
+  cursor: pointer;
+  color: hsl(0, 0%, 41%);
 }
 p{
   font-size: 2vw;
@@ -33,6 +36,9 @@ p{
 .wrapper{
   height: 100%;
   width: 100%;
+}
+.logo{
+  cursor: pointer;
 }
 .hamIcon{
   display: none;
@@ -45,10 +51,17 @@ p{
   width: 100%;
   justify-content: space-between;
 }
+.linksWrapper{
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  width: 100%;
+}
 .info{
   display: flex;
   justify-content: space-around;
   width: 50%;
+  align-items: center;
 }
 .textContent{
   width: 36vw;
@@ -68,6 +81,19 @@ p{
   display: flex;
   width: 20%;
   justify-content: space-around;
+  align-items: center;
+}
+.logDetails p{
+  font-size: 1.2vw;
+}
+.logBtn{
+  cursor: pointer;
+}
+.regBtn{
+  cursor: pointer;
+  border: 1px solid hsl(0, 0%, 8%);
+  padding: 10px 15px;
+  border-radius: 10px;
 }
 .heroSection img{
   width: 100%;
@@ -82,10 +108,18 @@ p{
   padding: 10px 15px;
   border-radius: 10px;
   width: fit-content;
+  cursor: pointer;
 }
 .learnBtn p{
   color: hsl(0, 0%, 98%);
 }
+.featuresList{
+  display: none;
+}
+.companyList{
+  display:none
+}
+
 
 
 
@@ -100,12 +134,46 @@ p{
 @media screen and (max-width: 530px) {
   .linksGroup{
     display: none;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 98%);
+    position: absolute;
+    z-index: 2;
+    width: 70vw;
+    justify-content: start;
+    overflow: hidden;
+    padding: 5vh 3.5vw 0vh 3.5vw;
+    height: 100%;
+    left: 30%;
+    top: 0%;
+    overflow: hidden;
   }
   .hamIcon{
     display: block;
   }
   .closeIcon{
     display: block;
+    padding-left: 90%;
+  }
+  .info{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 20vh;
+  }
+  .info h2{
+    font-size: 4vw;
+  }
+  .logDetails{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .logDetails p{
+    font-size: 4vw;
+  }
+  .regBtn{
+    padding: 10px 30%;
+    margin-top: 20px;
   }
   nav{
     display: flex;
@@ -153,12 +221,45 @@ p{
 @media screen and (max-width: 376px) {
   .linksGroup{
     display: none;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 98%);
+    position: absolute;
+    z-index: 2;
+    width: 70vw;
+    justify-content: start;
+    overflow: hidden;
+    padding: 5vh 3.5vw 0vh 3.5vw;
+    height: 100%;
+    left: 30%;
+    top: 0%;
   }
   .hamIcon{
     display: block;
   }
   .closeIcon{
     display: block;
+    padding-left: 90%;
+  }
+  .info{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 20vh;
+  }
+  .info h2{
+    font-size: 4vw;
+  }
+  .logDetails{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .logDetails p{
+    font-size: 4vw;
+  }
+  .regBtn{
+    padding: 10px 30%;
+    margin-top: 20px;
   }
   nav{
     display: flex;
