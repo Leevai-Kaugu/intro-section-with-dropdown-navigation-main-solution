@@ -33,6 +33,15 @@ p{
   font-size: 2vw;
   color: hsl(0, 0%, 41%);
 }
+li{
+  display: flex;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
+li:hover{
+  background-color: hsl(0, 0%, 95%);
+}
 .wrapper{
   height: 100%;
   width: 100%;
@@ -44,6 +53,12 @@ p{
   display: none;
 }
 .closeIcon{
+  display: none;
+}
+.upIcon{
+  display: none;
+}
+.upIcons{
   display: none;
 }
 .linksGroup{
@@ -62,6 +77,7 @@ p{
   justify-content: space-around;
   width: 50%;
   align-items: center;
+  position: relative;
 }
 .textContent{
   width: 36vw;
@@ -115,9 +131,52 @@ p{
 }
 .featuresList{
   display: none;
+  padding: 10px 20px;
+  height: 20vh;
+  justify-content: space-around;
+  align-content: center;
+  text-align: start;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 10px;
+  flex-direction: column;
+  position: absolute;
+  left: 0%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+}
+.companyList{
+  display: none;
+  padding: 10px 20px;
+  height: 15vh;
+  justify-content: space-around;
+  align-content: center;
+  text-align: start;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 10px;
+  flex-direction: column;
+  position: absolute;
+  left: 30%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.35);
+}
+.featuresList p{
+  font-size: 1vw;
+  margin-left: 15px;
+}
+.companyList p{
+  font-size: 1vw;
+  margin-left: 15px;
 }
 .companyList{
   display:none
+}
+.tulip{
+  display: flex;
+  align-items: center;
+}
+.tulip img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-left: 5px;
 }
 
 
@@ -134,18 +193,22 @@ p{
 @media screen and (max-width: 530px) {
   .linksGroup{
     display: none;
+    overflow: hidden;
     flex-direction: column;
     background-color: hsl(0, 0%, 98%);
     position: absolute;
     z-index: 2;
     width: 70vw;
     justify-content: start;
-    overflow: hidden;
     padding: 5vh 3.5vw 0vh 3.5vw;
     height: 100%;
     left: 30%;
     top: 0%;
-    overflow: hidden;
+    box-shadow: -170px 0px 0px rgba(0, 0, 0, 0.8);
+    transition: 90ms;
+  }
+  ul{
+    width: 40vw;
   }
   .hamIcon{
     display: block;
@@ -157,10 +220,11 @@ p{
   .info{
     flex-direction: column;
     align-items: flex-start;
-    height: 20vh;
+    height: fit-content;
   }
   .info h2{
     font-size: 4vw;
+    margin: 10px;
   }
   .logDetails{
     flex-direction: column;
@@ -215,6 +279,26 @@ p{
   }
   .learnBtn{
     margin: 15px;
+  }
+  .companyList{
+    position: relative;
+    left: 0%;
+    box-shadow: none;
+  }
+  .featuresList{
+    position: relative;
+    box-shadow: none;
+  }
+  .companyList p{
+    font-size: 4vw;
+    margin-left: 0px;
+  }
+  .featuresList p{
+    font-size: 4vw;
+  }
+  .tulip img{
+    width: 10%;
+    height: 100%;
   }
 }
 
@@ -227,7 +311,7 @@ p{
     z-index: 2;
     width: 70vw;
     justify-content: start;
-    overflow: hidden;
+    box-shadow: -148px 0px 0px rgba(0, 0, 0, 0.8);
     padding: 5vh 3.5vw 0vh 3.5vw;
     height: 100%;
     left: 30%;
@@ -243,10 +327,11 @@ p{
   .info{
     flex-direction: column;
     align-items: flex-start;
-    height: 20vh;
+    height: fit-content;
   }
   .info h2{
     font-size: 4vw;
+    margin: 10px;
   }
   .logDetails{
     flex-direction: column;
@@ -301,5 +386,16 @@ p{
   }
   .learnBtn{
     margin: 15px;
+  }
+  .companyList{
+    position: relative;
+    box-shadow: none;
+  }
+  .companyList p{
+    margin-left: 0px;
+  }
+  .featuresList{
+    position: relative;
+    box-shadow: none;
   }
 }
