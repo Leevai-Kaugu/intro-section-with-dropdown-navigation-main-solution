@@ -161,6 +161,11 @@ li:hover{
   font-size: 1vw;
   margin-left: 15px;
 }
+.featuresList img{
+  width: 15%;
+  height: 100%;
+  object-fit: contain;
+}
 .companyList p{
   font-size: 1vw;
   margin-left: 15px;
@@ -189,6 +194,19 @@ li:hover{
   .textContent p{
     font-size: 4vw;
   }
+  h2{
+    font-size: 2vw;
+  }
+  .featuresList p{
+    font-size: 2vw;
+  }
+  .companyList p{
+    font-size: 2vw;
+  }
+  .info {
+    width: 65%;
+}
+  
 }
 @media screen and (max-width: 530px) {
   .linksGroup{

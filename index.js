@@ -3,17 +3,21 @@ const menu = document.querySelector('.linksGroup');
 const closeButton = document.querySelector('.closeIcon');
 const features = document.querySelector('.Features');
 const company = document.querySelector('.company');
+const upIcon = document.querySelector('.featuresClose');
+const Klose = document.querySelector('.Klose');
 
 
+Klose.addEventListener('click',()=>{
+  hamButton.style.display = 'flex';
+  menu.style.display = 'none';
+})
 hamButton.addEventListener("click",()=>{
   menu.style.display = 'flex';
   hamButton.style.display = 'none';
 });
 
-closeButton.addEventListener("click",()=>{
-  hamButton.style.display = 'flex';
-  menu.style.display = 'none';
-});
+
+// HOVER STATES
 features.addEventListener("mouseenter",()=>{
   document.querySelector('.featuresList').style.display = 'flex';
   document.querySelector('.downIcon').style.display = 'none';
@@ -34,3 +38,13 @@ company.addEventListener("mouseleave",()=>{
 document.querySelector('.upIcons').style.display = 'none';
 document.querySelector('.downIcons').style.display = 'block';
 });
+// HOVER STATES
+
+
+features.addEventListener('click',()=>{
+  document.querySelector('.featuresList').style.display == 'flex';
+})
+company.addEventListener('click',()=>{
+  document.querySelector('.companyList').style.display == 'flex';
+})
+
