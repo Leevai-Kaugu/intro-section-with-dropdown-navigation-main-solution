@@ -312,7 +312,7 @@ li:hover{
     margin-left: 0px;
   }
   .featuresList p{
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   .tulip img{
     width: 10%;
@@ -415,5 +415,6 @@ li:hover{
   .featuresList{
     position: relative;
     box-shadow: none;
+    font-size: 3.5vw;
   }
 }
