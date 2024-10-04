@@ -8,12 +8,10 @@ const Klose = document.querySelector('.Klose');
 
 
 Klose.addEventListener('click',()=>{
-  hamButton.style.display = 'flex';
-  menu.style.display = 'none';
+  menu.classList.remove('show')
 })
 hamButton.addEventListener("click",()=>{
-  menu.style.display = 'flex';
-  hamButton.style.display = 'none';
+  menu.classList.add('show')
 });
 
 
