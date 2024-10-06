@@ -49,17 +49,12 @@ li:hover{
 .logo{
   cursor: pointer;
 }
-.hamIcon{
+.hamIcon,.closeIcon{
   display: none;
 }
-.closeIcon{
-  display: none;
-}
-.upIcon{
-  display: none;
-}
-.upIcons{
-  display: none;
+
+.downIcons,.downIcon{
+  transition: transform 0.3s ease;
 }
 .linksGroup{
   display: flex;
@@ -209,6 +204,21 @@ li:hover{
   
 }
 @media screen and (max-width: 530px) {
+  .overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  .overlay.showOverlay{
+    left: 0%;
+    opacity: 100;
+  }
   .linksGroup{
     display: flex;
     flex-direction: column;
@@ -221,12 +231,10 @@ li:hover{
     height: 100%;
     left: 140%;
     top: 0%;
-    box-shadow: -170px 0px 0px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
   }
   .linksGroup.show{
     left: 30%;
-    box-shadow: -170px 0px 0px rgba(0, 0, 0, 0.5);
   }
   ul{
     width: 40vw;
@@ -336,7 +344,6 @@ li:hover{
     height: 100%;
     left: 240%;
     top: 0%;
-    box-shadow: -170px 0px 0px rgba(0, 0, 0, 0);
     transition: all 0.85s ease-in-out;
   }
   .linksGroup.show{
